@@ -1,0 +1,23 @@
+Started
+
+
+
+Progress: |[0m[1000D[K[31mERROR[0m["test_login_with_invalid_information", UsersLoginTest, 0.007347]
+ test_login_with_invalid_information#UsersLoginTest (0.01s)
+ActiveRecord::Fixture::FormatError:         ActiveRecord::Fixture::FormatError: a YAML error occurred parsing /Users/Elvyn/Desktop/Rails/sample_app/test/fixtures/users.yml. Please note that YAML must be consistently indented using spaces. Tabs are not allowed. Please have a look at http://www.yaml.org/faq.html
+        The exact error was:
+          Psych::SyntaxError: (<unknown>): found character that cannot start any token while scanning for the next token at line 3 column 1
+            
+
+[0m[1000D[K[31mERROR[0m["test_login_with_valid_information", UsersLoginTest, 0.010789]
+ test_login_with_valid_information#UsersLoginTest (0.01s)
+ActiveRecord::Fixture::FormatError:         ActiveRecord::Fixture::FormatError: a YAML error occurred parsing /Users/Elvyn/Desktop/Rails/sample_app/test/fixtures/users.yml. Please note that YAML must be consistently indented using spaces. Tabs are not allowed. Please have a look at http://www.yaml.org/faq.html
+        The exact error was:
+          Psych::SyntaxError: (<unknown>): found character that cannot start any token while scanning for the next token at line 3 column 1
+            
+
+[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m|
+
+Finished in 0.01360s
+2 tests, 0 assertions, [31m0 failures, 2 errors, [0m[33m0 skips[0m
+]2;[Minitest results] 2 tests

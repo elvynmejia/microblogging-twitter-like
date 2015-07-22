@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   def create
 	@user = User.new(user_params)
   	if @user.save
+      log_in @user
   		#handle a successful save
   		#render the profile
       #not entirely sure how this renders the new created user profile
