@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
 	#has_secure_password automatically adds an authenticate method
 	#witht the correct password it returns the user itself, false otherwise
 	has_secure_password 
-	validates :password, length: { minimum: 6 }
+	validates :password, presence:true , length: { minimum: 6 }, allow_nil: true
 
 	#returns the hash digest of the given string
 	def User.digest(string)
