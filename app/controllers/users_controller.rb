@@ -19,15 +19,11 @@ class UsersController < ApplicationController
   end 
 
   def create
-	@user = User.new(user_params)
+	  @user = User.new(user_params)
   	if @user.save
-      log_in @user
-  		#handle a successful save
-  		#render the profile
-      #not entirely sure how this renders the new created user profile
-      #there is no view that corresponds to the newly created user profile
-      flash[:success] = "Welcome to the Sample App!"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
   	else
   		#handle a failure save
   		render 'new'
