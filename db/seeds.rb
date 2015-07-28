@@ -15,5 +15,5 @@ User.create!(	name: "Example User",
 					password: password, 
 					password_confirmation: password,
 					activated: true,
-					create_at: Time.zone.now )
+					created_at: Time.zone.now )
 end 
