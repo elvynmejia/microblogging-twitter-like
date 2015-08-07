@@ -1,9 +1,6 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
 
   #automatically gets run before each test
   def setup 
@@ -82,5 +79,34 @@ class UserTest < ActiveSupport::TestCase
     assert_difference 'Micropost.count', -1 do 
       @user.destroy
     end  
+  end
+
+  test 'should follow and unfollow a user' do
+    julia   = users(:julia)
+    archer  = users(:archer) 
+    assert_not julia.following?(archer)
+    julia.follow(archer)
+    assert julia.following?(archer)
+    assert archer.followers.include?(julia)
+    julia.unfollow(archer)
+    assert_not julia.following?(archer)
+  end 
+
+  test "feed should have the right posts" do
+    julia = users(:julia)
+    archer  = users(:archer)
+    lana    = users(:lana)
+    # Posts from followed user
+    lana.microposts.each do |post_following|
+      assert julia.feed.include?(post_following)
+    end
+    # Posts from self
+    julia.microposts.each do |post_self|
+      assert julia.feed.include?(post_self)
+    end
+    # Posts from unfollowed user
+    archer.microposts.each do |post_unfollowed|
+      assert_not julia.feed.include?(post_unfollowed)
+    end
   end
 end
