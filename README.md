@@ -1,4 +1,4 @@
-# Ruby on Rails Tutorial: sample application
+# Microblogging web app with users and microposts
 
 This is the sample application for the
 [*Ruby on Rails Tutorial:
